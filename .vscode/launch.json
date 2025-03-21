@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/sciwake/github/Algorithms/yt_1_cpp/lesson_1",
-      "program": "/Users/sciwake/github/Algorithms/yt_1_cpp/lesson_1/build/Debug/outDebug"
+      "cwd": "/Users/sciwake/github/Algorithms/yt_1_cpp/1_complexity_listening_unexpected_cases",
+      "program": "/Users/sciwake/github/Algorithms/yt_1_cpp/1_complexity_listening_unexpected_cases/build/Debug/outDebug"
     }
   ]
 }
