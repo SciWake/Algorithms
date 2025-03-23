@@ -1,8 +1,8 @@
-#include <iostream>  
+#include <algorithm>
+#include <iostream>
+#include <ranges>
 #include <string>
 #include <vector>
-#include <algorithm>
-#include <ranges>
 
 using namespace std;
 using namespace ranges;
