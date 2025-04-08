@@ -30,8 +30,8 @@
 *.exe
 *.out
 *.app
-algolia/*
 
 # My ignore files
 .ipynb_checkpoints/
 outDebug
+.DS_Store
