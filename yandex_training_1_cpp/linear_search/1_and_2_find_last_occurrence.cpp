@@ -8,7 +8,7 @@ using namespace std;
 
 
 // Первое левое вхождение, проход с начала
-int FindFirstOccurrence(vector<int> numbers, int search_number) {
+int FindFirstOccurrence(const vector<int>& numbers, int search_number) {
     int search_index = -1;
     for (size_t i = 0; i < numbers.size(); i++) {
         if (numbers[i] == search_number && search_index == -1) {
@@ -19,7 +19,7 @@ int FindFirstOccurrence(vector<int> numbers, int search_number) {
 }
 
 // Первое правео вхождение, проход с начала
-int FindLastOccurrence(vector<int> numbers, int search_number) {
+int FindLastOccurrence(const vector<int>& numbers, int search_number) {
     int search_index = -1;
     for (size_t i = 0; i < numbers.size(); i++) {
         if (numbers[i] == search_number) {
@@ -30,7 +30,7 @@ int FindLastOccurrence(vector<int> numbers, int search_number) {
 }
 
 // Первое правое вхождение, проход с конца
-int FindLastOccurrenceReverse(vector<int> numbers, int search_number) {
+int FindLastOccurrenceReverse(const vector<int>& numbers, int search_number) {
     int search_index = -1;
     for (size_t i = numbers.size() - 1; i >= 0; i--) {
         if (numbers[i] == search_number && search_index == -1) {
