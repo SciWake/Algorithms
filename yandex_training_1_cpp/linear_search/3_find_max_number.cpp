@@ -7,7 +7,7 @@ using namespace std;
 
 
 // Может приводить к копирвоанию, если объект не примитив int, double...
-int FindMaxNumber(const vector<int>& numbers) {
+int FindMaxValue(const vector<int>& numbers) {
     int max_number = numbers[0];
     for (size_t i = 1; i < numbers.size(); i++) {
         if (numbers[i] > max_number) {
@@ -18,7 +18,7 @@ int FindMaxNumber(const vector<int>& numbers) {
 }
 
 // Без копирования объектов
-size_t FindMaxNumberDontCopy(const vector<int>& numbers) {
+size_t FindMaxIndex(const vector<int>& numbers) {
     size_t max_index = 0;
     for (size_t i = 1; i < numbers.size(); i++) {
         if (numbers[i] > numbers[max_index]) {
@@ -31,6 +31,6 @@ size_t FindMaxNumberDontCopy(const vector<int>& numbers) {
 
 int main() {
     vector<int> numbers = {2, 5, 1, 8, 9, 2, 1, 1};
-    cout << "FindMaxNumber: "s << FindMaxNumber(numbers) << endl;
-    cout << "FindMaxNumberDontCopy: "s << FindMaxNumberDontCopy(numbers) << endl;
+    cout << "FindMaxNumber: "s << FindMaxValue(numbers) << endl;
+    cout << "FindMaxNumberDontCopy: "s << FindMaxIndex(numbers) << endl;
 }
