@@ -42,10 +42,32 @@ int CalculateTrappedWater(const vector<int>& heights) {
     return trapped_water;
 }
 
+int CalculateTrappedWaterTwoPointers(const vector<int>& heights) {
+    if (heights.empty()) return 0;
+
+    size_t left_pos = 0, right_pos = heights.size() - 1;
+    int left_max = heights[left_pos], right_max = heights[right_pos];
+    int trapped_water = 0;
+
+    while (left_pos < right_pos) {
+        if (left_max >= right_max) {
+            trapped_water += right_max - heights[right_pos];
+            --right_pos;
+            right_max = max(right_max, heights[right_pos]);
+        } else {
+            trapped_water += left_max - heights[left_pos];
+            ++left_pos;
+            left_max = max(left_max, heights[left_pos]);
+        }
+    }
+    
+    return trapped_water;
+}
+
 
 int main() {
     vector<int> relief_1 = {2, 5, 2, 3, 6, 9, 3, 1, 3, 4, 6}; // 18
-    cout << CalculateTrappedWater(relief_1) << endl;
-    vector<int> relief_2 = {1, 2, 3, 4, -11019, 4, 3, 2, 1}; // # 11023
-    cout << CalculateTrappedWater(relief_2) << endl;
+    cout << CalculateTrappedWaterTwoPointers(relief_1) << endl;
+    vector<int> relief_2 = {1, 2, 3, 4, -11019, 4, 3, 2, 1}; // 11023
+    cout << CalculateTrappedWaterTwoPointers(relief_2) << endl;
 }
