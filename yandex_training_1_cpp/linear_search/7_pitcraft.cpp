@@ -44,7 +44,7 @@ int CalculateTrappedWater(const vector<int>& heights) {
 
 
 int main() {
-    vector<int> relief_1 = {}; // 18
+    vector<int> relief_1 = {2, 5, 2, 3, 6, 9, 3, 1, 3, 4, 6}; // 18
     cout << CalculateTrappedWater(relief_1) << endl;
     vector<int> relief_2 = {1, 2, 3, 4, -11019, 4, 3, 2, 1}; // # 11023
     cout << CalculateTrappedWater(relief_2) << endl;
