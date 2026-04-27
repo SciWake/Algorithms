@@ -6,3 +6,4 @@
 * Adaptive Specializing Interpreter (PEP 659) 
 * Кэш процессора (L1/L2/L3)
 * GIT
+* O(N) math theory 
